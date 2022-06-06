@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/static/plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/static/dist/css/adminlte.min.css">
+
+  {% endblock %}
+</head>
+<body style="background-color: lightblue;  background-repeat: no-repeat;  background-size: 100% 100%;">
+<br/>
+
+
+
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Forgot Password.</h1>
+            </div>
+            <div class="col-sm-6">
+              
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+<section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- jquery validation -->
+          <div class="card card-primary">
+            <div class="form-group">
+              {% if confirm %}
+              <div class="alert alert-danger" style="margin-top:10px">{{ confirm }}</div>
+              {% endif %}
+
+          </div>
+            <div class="card-header">
+              <h3 class="card-title">Enter your Email ID</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form id="quickForm"  method="POST" action="/forgotPass">
+              <div class="card-body">
+                <div class="form-group">
+                  {% if error %}
+                  <div class="alert alert-danger" style="margin-top:10px">{{ error }}</div>
+                  {% endif %}
+  
+                  {% if done %}
+                  <div class="alert alert-success" style="margin-top:10px">{{ done }}</div>
+                  {% endif %}
+  
+              </div>
+              <p>Enter your Email ID we will sent OTP for confirming the user.</p>
+                <div class="form-group">
+                    <label for="name">Enter your Email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter your Email" required/>
+                  </div>
+                        
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+            <br/>
+            <br/>
+          </div>
+          <!-- /.card -->
+          </div>
+        <!--/.col (left) -->
+        <!-- right column -->
+        <div class="col-md-6">
+
+        </div>
+        <!--/.col (right) -->
+      </div>
+      <!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </section>
+ 
+</body></html>

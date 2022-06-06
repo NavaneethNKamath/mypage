@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/static/plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/static/dist/css/adminlte.min.css">
+
+  {% endblock %}
+</head>
+
+<body>
+  <center style="background-color: rgba(255,253,219,255);"> <img
+      style=" align-items: center; max-width: 100%;height: auto; " ;" src="/static/headerlogo.png" alt=""></center>
+  <br />
+  {% block body %}
+
+  {% endblock %}
+
+  <footer style="  
+left:0px;
+      
+      bottom:0px;
+    height:auto;
+      width:100%;
+      background: darkgray;">
+
+    <p style="background-color:darkgray; text-align:center; "> Visitors : <a
+      href="https://www.webfreecounter.com/" target="_blank"><img
+        src="https://www.cutercounter.com/hits.php?id=humxackxp&nd=6&style=37" border="0" alt="website counter"></a> 
+      
+      <br />Developed By : Team EKYAM | 2022 <br /> </p>
+
+  </footer>
+</body>

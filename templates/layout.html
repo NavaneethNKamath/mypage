@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      {% block head %}
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata" rel="stylesheet">
+      <link rel="stylesheet" href="/static/s.css">
+      <link rel="icon" href="/static/webcon.jpg">
+   {% endblock %}
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div >
+           
+               <h3 class="title" style="color:aliceblue;">TEAM EKYAM</h3>
+            </a>
+            <ul class="nav navbar-nav pull-right">
+               {% block u %}
+               
+               {% endblock %}
+
+               <li><a href="/logout"> Logout </a></li>
+               
+            </ul>
+         </div>
+      </nav>
+      <div id="content">{% block content %}{% endblock %}</div>
+
+      
+      
+      <br>
+      
+      <footer>
+         <br>
+         <p class="text-center small"> Developed By : Team EKYAM | 2022 </p>
+      </footer>
+
+   </body>
+</html>
