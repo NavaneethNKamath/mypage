@@ -15,7 +15,7 @@ from flask_session import Session
 from flask_mongoengine import MongoEngine
 import os
 import pandas as pd
-
+from flask import send_from_directory
 
 
 
@@ -73,6 +73,11 @@ def generateOTP():
         OTP += digits[math.floor(random.random() * 10)]
 
     return OTP
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),'favicon.ico',mimetype='image/vnd.microsoft.icon')
+
 
 def sendEmail(recipientsArr,subject,msgBody):
     try:
